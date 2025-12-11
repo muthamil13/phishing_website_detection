@@ -1,0 +1,230 @@
+/* ============================
+   RESET
+============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+    transition: 0.3s;
+}
+
+/* ============================
+   LIGHT & DARK THEME VARIABLES
+============================ */
+:root {
+    --bg: #e3f2ff;
+    --card-bg: #ffffff;
+    --text: #222;
+    --primary: #4d7cff;
+    --secondary: #6b45ff;
+}
+
+.dark-mode {
+    --bg: #0d1117;
+    --card-bg: #161b22;
+    --text: #e6edf3;
+    --primary: #58a6ff;
+    --secondary: #8b5cf6;
+}
+
+/* ============================
+   HEADER
+============================ */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* ============================
+   NAVIGATION
+============================ */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    background: var(--card-bg);
+    color: var(--primary);
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ============================
+   THEME TOGGLE BUTTON
+============================ */
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--card-bg);
+    color: var(--primary);
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+/* ============================
+   CARD (Main Container)
+============================ */
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+    animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+/* ============================
+   AUTO-TYPING TEXT
+============================ */
+.typed {
+    font-size: 18px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    min-height: 150px;
+}
+
+/* Caret blinking effect */
+.typed .caret {
+    display: inline-block;
+    width: 3px;
+    height: 22px;
+    background: var(--primary);
+    animation: blink 0.9s infinite;
+    margin-left: 3px;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Colored text accents */
+.accent {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.accent-2 {
+    color: #0077b6;
+    font-weight: bold;
+}
+
+/* List styling inside typed text */
+.typed ul {
+    margin-left: 25px;
+}
+
+.typed li {
+    margin-bottom: 8px;
+}
+
+/* ============================
+   INPUT + BUTTON STYLING
+============================ */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 18px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 17px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ============================
+   SCANNER BAR ANIMATION
+============================ */
+#scanner {
+    margin-top: 20px;
+    height: 6px;
+    width: 100%;
+    background: #bbb;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+#scanner .bar {
+    height: 100%;
+    width: 40%;
+    background: var(--primary);
+    animation: scan 1s infinite;
+}
+
+@keyframes scan {
+    0% {margin-left: -40%;}
+    100% {margin-left: 100%;}
+}
+
+/* RESULT TEXT */
+#result {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.safe {
+    color: #2ecc71;
+}
+
+.phishing {
+    color: #e74c3c;
+}

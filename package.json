@@ -1,0 +1,27 @@
+{
+  "name": "phishing-detection-system",
+  "version": "1.0.0",
+  "description": "Advanced phishing detection system with modern UI, animations, and smart URL scanning.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "keywords": [
+    "phishing",
+    "cybersecurity",
+    "url-checker",
+    "security-tools",
+    "nodejs",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC"
+}
